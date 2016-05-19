@@ -14,7 +14,7 @@ def one_away(string_1, string_2)
         end
         if count > 1
           return false
-        end 
+        end
       end
     elsif string_1.length > string_2.length
       for i in 0..string_1.length
@@ -24,7 +24,7 @@ def one_away(string_1, string_2)
         end
         if count > 1
           return false
-        end 
+        end
         j += 1
       end
     else
@@ -35,7 +35,7 @@ def one_away(string_1, string_2)
         end
         if count > 1
           return false
-        end 
+        end
         j += 1
       end
     end

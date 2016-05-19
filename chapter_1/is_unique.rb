@@ -1,5 +1,5 @@
 def is_unique_with_extra_data_structure(string)
-  hash = Hash.new 0 
+  hash = Hash.new 0
   string.each_char do |letter|
     hash[letter] += 1
     if hash[letter] > 1
