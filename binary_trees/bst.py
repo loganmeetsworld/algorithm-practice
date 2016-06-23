@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, val):
-        self.l = None
-        self.r = None
+        self.left = None
+        self.right = None
         self.v = val
 
 class Tree:
@@ -19,15 +19,15 @@ class Tree:
 
     def _add(self, val, node):
         if(val < node.v):
-            if(node.l != None):
-                self._add(val, node.l)
+            if(node.left != None):
+                self._add(val, node.left)
             else:
-                node.l = Node(val)
+                node.left = Node(val)
         else:
-            if(node.r != None):
-                self._add(val, node.r)
+            if(node.right != None):
+                self._add(val, node.right)
             else:
-                node.r = Node(val)
+                node.right = Node(val)
 
     def find(self, val):
         if(self.root != None):
@@ -38,10 +38,10 @@ class Tree:
     def _find(self, val, node):
         if(val == node.v):
             return node
-        elif(val < node.v and node.l != None):
-            self._find(val, node.l)
-        elif(val > node.v and node.r != None):
-            self._find(val, node.r)
+        elif(val < node.v and node.left != None):
+            self._find(val, node.left)
+        elif(val > node.v and node.right != None):
+            self._find(val, node.right)
 
     def deleteTree(self):
         self.root = None
@@ -52,9 +52,9 @@ class Tree:
 
     def _printTree(self, node):
         if(node != None):
-            self._printTree(node.l)
+            self._printTree(node.left)
             print str(node.v) + ' '
-            self._printTree(node.r)
+            self._printTree(node.right)
 
 
 tree = Tree()
