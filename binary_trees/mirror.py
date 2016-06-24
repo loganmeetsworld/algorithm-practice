@@ -1,4 +1,4 @@
-import_module(bst)
+import bst
 
 def mirror(root):
     if root is None:
@@ -7,4 +7,5 @@ def mirror(root):
     mirror(root.right)
     root.left, root.right = root.right, root.left
 
+print bst
 print mirror(bst.root)
