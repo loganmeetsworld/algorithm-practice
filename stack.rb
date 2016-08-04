@@ -1,3 +1,4 @@
+# Implementation of the ADT of Stack
 class Stack
   def initialize(size)
     @size = size
