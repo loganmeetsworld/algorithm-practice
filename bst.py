@@ -1,5 +1,6 @@
 from math import factorial
 
+# Python implementation of a BST
 class Tree:
     def __init__(self, *seq):
         self.root = None
