@@ -1,7 +1,7 @@
 class Queue
-  def initialize(size)
-    @size = size
-    @store = Array.new(@size)
+  def initialize(length)
+    @length = length
+    @store = Array.new(@length)
     @head, @tail = -1, 0
   end
 
@@ -28,8 +28,8 @@ class Queue
     end
   end
 
-  def size
-    @size
+  def length
+    @length
   end
 
   private
@@ -39,6 +39,6 @@ class Queue
   end
 
   def full?
-    @tail.abs == (@size)
+    @tail.abs == (@length)
   end
 end
